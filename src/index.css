@@ -1,0 +1,166 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+
+  color: #242424;
+  background-color: #fefefe;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: #f3efef;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 98vw;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.dashboard {
+  background-color: inherit;
+  width: 95vw;
+  height: 93vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-top: 30px;
+}
+
+h1 {
+  font-size: 1.5em;
+  line-height: 1.1;
+  padding: 0;
+  margin: 0;
+}
+
+.table {
+  width: 70vw;
+  overflow: auto;
+  height: 68vh;
+  border: solid 0.1em rgb(190, 187, 187);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.symbol {
+  color: rgb(124, 123, 123);
+  margin-left: 15px;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(192, 188, 188, 0.8);
+}
+
+.container-form {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 5px 20px 20px 20px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.group-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons {
+  width: 60%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.buttons-form {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+
+}
+
+.button-investment {
+  border-radius: 6px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: #4e4c4c;
+  color: #ddd;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.25s;
+}
+
+.button-investment:hover {
+  background-color: #8d8c8c;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+}
+
+thead th {
+  background-color: #f1f1f1;
+  border: none;
+  border-bottom: solid 0.1em #807f7f;
+  text-align: center;
+  border-left: 1px solid #a1a1a1;
+}
+
+thead th:first-child {
+  border-left: none
+}
+
+th {
+  text-align: left;
+  color: #444;
+  padding: 8px;
+}
+
+tr {
+  border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+tr:nth-child(odd) {
+  background-color: #dddada;
+}
+
+img {
+  width: 20px;
+  margin-right: 15px;
+  vertical-align: middle;
+}
