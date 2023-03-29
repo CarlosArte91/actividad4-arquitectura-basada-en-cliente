@@ -1,30 +1,19 @@
+import { headers } from "../../constants/constants"
+
 export function Table({ coins }) {
   return (
     <section className="table">
       <table>
         <thead>
           <tr>
-            <th>
-              <span>Moneda</span>
-            </th>
-
-            <th>
-              <span>Precio</span>
-            </th>
-
-            <th>
-              <span>Rankin</span>
-            </th>
-
-            <th>
-              <span>Volumen en 24 h</span>
-            </th>
-
-            <th>
-              <span>Cap. de mercado</span>
-            </th>
+            {headers.map((header) => (
+              <th key={header.id}>
+                <span>{header.title}</span>
+              </th>
+            ))}
           </tr>
         </thead>
+
         <tbody>
           {coins.map((coin) => (
             <tr key={coin.id}>
@@ -33,10 +22,10 @@ export function Table({ coins }) {
                 <span>{coin.name}</span>
                 <span className="symbol">{coin.symbol}</span>
               </th>
-              <th>{coin.current_price}</th>
-              <th>{coin.market_cap_rank}</th>
-              <th>{coin.total_volume}</th>
-              <th>{coin.market_cap}</th>
+              <th>{coin.price}</th>
+              <th>{coin.rankin}</th>
+              <th>{coin.totalVolume}</th>
+              <th>{coin.marketCap}</th>
             </tr>
           ))}
         </tbody>

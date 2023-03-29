@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { cryptoService } from "../../services/crypto.service"
+import { formatedApiResponse } from "../../utilities/formatedApiResponse"
 import { InvestmentForm } from "../investment_form/InvestmentForm"
 import { Table } from "../table/Table"
 
@@ -13,7 +14,8 @@ export function Dashboard() {
 
   const loadCoins = async () => {
     const { data } = await cryptoService()
-    setCoins(data)
+    const response = formatedApiResponse(data)
+    setCoins(response)
   }
 
   useEffect(() => {
